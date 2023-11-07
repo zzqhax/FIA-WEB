@@ -1,0 +1,4 @@
+G:/CLION-PROJECT/FIA-WEB/cmake-build-debug/CMakeFiles/FIA_SERV.dir
+G:/CLION-PROJECT/FIA-WEB/cmake-build-debug/CMakeFiles/FIA_CLIT.dir
+G:/CLION-PROJECT/FIA-WEB/cmake-build-debug/CMakeFiles/edit_cache.dir
+G:/CLION-PROJECT/FIA-WEB/cmake-build-debug/CMakeFiles/rebuild_cache.dir

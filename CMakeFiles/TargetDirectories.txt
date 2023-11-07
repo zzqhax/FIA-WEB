@@ -1,0 +1,4 @@
+/home/fiametta/FIA-WEB/CMakeFiles/FIA_SERV.dir
+/home/fiametta/FIA-WEB/CMakeFiles/FIA_CLIT.dir
+/home/fiametta/FIA-WEB/CMakeFiles/edit_cache.dir
+/home/fiametta/FIA-WEB/CMakeFiles/rebuild_cache.dir
