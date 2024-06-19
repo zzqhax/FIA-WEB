@@ -1,13 +1,13 @@
 # Compiler settings
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall
-LIBS = -lmysqlclient
+CXXFLAGS = -std=c++17 -Wall
+LIBS = -lmysqlclient -lhiredis
 
 # Source files
-SRCS = conn.cpp
+SRCS = DBM.cpp
 
 # Output binary
-TARGET = server
+TARGET = DBM
 
 all: $(TARGET)
 

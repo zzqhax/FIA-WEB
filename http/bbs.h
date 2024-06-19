@@ -1,1 +1,1 @@
-const int buffersize = 1024;
+extern char buffer[buffersize];
