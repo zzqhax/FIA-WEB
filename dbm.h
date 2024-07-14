@@ -1,13 +1,7 @@
 #ifndef DBM_H
 #define DBM_H
 
-#include <iostream>
-#include <string>
-#include <mysql_driver.h>
-#include <mysql_connection.h>
-#include <cppconn/statement.h>
-#include <cppconn/resultset.h>
-#include <hiredis/hiredis.h>
+#include "pch.h"
 
 class DBM {
 public:
