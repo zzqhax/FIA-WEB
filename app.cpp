@@ -108,11 +108,11 @@ void handle(int clientfd, DBM& dbm) {
 }
 
 int main() {
-    std::string mysqlHost = ; 
-    std::string mysqlUser = ;      
-    std::string mysqlPassword = ; 
-    std::string mysqlDatabase = ; 
-    int redisPort = ;                
+    std::string mysqlHost = "localhost"; 
+    std::string mysqlUser = "root";      
+    std::string mysqlPassword = "95137?Abc"; 
+    std::string mysqlDatabase = "Fia_ID_Password"; 
+    int redisPort = 6379;                
 
     DBM dbm(mysqlHost, mysqlUser, mysqlPassword, mysqlDatabase, redisPort);
 
