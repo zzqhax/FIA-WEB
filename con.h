@@ -1,13 +1,7 @@
 #ifndef CON_H
 #define CON_H
 
-#include <iostream>
-#include <functional>
-#include <cstring>
-#include <arpa/inet.h>
-#include <unistd.h>
-#include <sys/epoll.h>
-#include <sys/socket.h>
+#include "pch.h"
 
 class CON {
 public:
