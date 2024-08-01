@@ -9,6 +9,7 @@
 #include <cstring>
 #include <thread>
 #include <functional>
+#include <atomic>
 
 #include <sys/epoll.h>
 #include <sys/socket.h>

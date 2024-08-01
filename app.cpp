@@ -1,6 +1,7 @@
 #include "con.h"
 #include "dbm.h"
 #include "pch.h"
+#include "tp.h"
 
 void sendFile(int clientfd, const std::string& filename, const std::string& contentType) {
     std::ifstream file("src/" + filename, std::ios::in | std::ios::binary);
@@ -21,8 +22,8 @@ void sendFile(int clientfd, const std::string& filename, const std::string& cont
     response += content.str();
 
     write(clientfd, response.c_str(), response.length());
+    ::close(clientfd);  
 }
-
 
 std::pair<std::string, std::string> parsePostData(const std::string& request) {
     std::string delimiter = "\r\n\r\n";
@@ -101,10 +102,8 @@ void handle(int clientfd, DBM& dbm) {
 
             write(clientfd, notFoundResponse.c_str(), notFoundResponse.length());
         }
-        ::close(clientfd);
-    } else {
-        ::close(clientfd);
     }
+    ::close(clientfd);  
 }
 
 int main() {
@@ -122,6 +121,13 @@ int main() {
     server.listen(10);
 
     std::cout << "Server started on 127.0.0.1:8081" << std::endl;
-    server.run([&dbm](int clientfd) { handle(clientfd, dbm); });
+
+    ThreadPool pool(4);  
+    server.run([&dbm, &pool](int clientfd) {
+        pool.enqueueTask([clientfd, &dbm]() {
+            handle(clientfd, dbm);
+        });
+    });
+
     return 0;
 }
