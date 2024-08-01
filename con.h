@@ -3,6 +3,10 @@
 #define CON_H
 
 #include "pch.h"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2b028cc564a6979744f35229c14b9ff3976ce1e4
 class CON {
 public:
     using ClientHandler = std::function<void(int)>;
